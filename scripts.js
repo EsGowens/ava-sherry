@@ -8,6 +8,7 @@ barba.init({
     transitions: [
         {
             name: 'fade',
+            once() {},
             beforeEnter ({ current, next, trigger }) {
                 
                 const headerLinks = document.querySelectorAll("header a")
@@ -30,13 +31,13 @@ barba.init({
     ],
     views: [
         {
-            namespace: 'feed',
+            namespace: "feed",
             beforeEnter () {
-                bodyTag.classList.add('feed')
+                bodyTag.classList.add("feed")
             },
 
-            beforeLeave() {
-                bodyTag.classList.remove('feed')
+            beforeLeave () {
+                bodyTag.classList.remove("feed")
             }
         }
     ]
